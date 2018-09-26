@@ -1,3 +1,7 @@
+/*
+ Failed
+*/
+
 public class number {
     public static void main(String[] args){
         int n1 = 1245;
