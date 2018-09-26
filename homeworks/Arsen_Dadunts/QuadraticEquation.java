@@ -11,7 +11,7 @@ public class  QuadraticEquation {
        System.out.println("Please enter the c value:");
        double c = input.nextDouble();
 
-       Double D = b * b - 4 * a * c;
+       Double D = b * b - 4 * a * c; // why the variable name is in upper case and why you are using Double instead of double ?
        if (a == 0) {
            System.out.println("The a value can't 0:");
        } else if (D > 0) {
