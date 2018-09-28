@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class BubbleSort {
-
-    public static void main(String[] args) {
+         public static void main(String[] args) {
     int []arr={9, 5, 7, 8, 1, 2, 3};
     for(int i=0; i<arr.length-1; i++) {
         for (int j = 0; j < arr.length - 1; j++) {
@@ -14,9 +13,5 @@ public class BubbleSort {
     }
         for ( int i=0; i<arr.length; i++){
             System.out.print(arr[i]+" ");        }
-
-
-
     }
 }
-
