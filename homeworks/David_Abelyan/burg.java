@@ -1,13 +1,3 @@
-/*
- Whyyyyyyyy?
- 
- Class name should start with upper case character
- 
- Homework doesn't correct
-*/
-
-
-
 public class burg {
     public static void main(String[] args){
         int b = 20;
