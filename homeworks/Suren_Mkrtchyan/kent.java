@@ -1,6 +1,6 @@
-public class MyClass {
+public class kent {
     public static void main(String args[]) {
         int n=7;
-        System.out.println((n*n)*(n%2));
+        System.out.prontln((n*n)*(n%2))
     }
 }
