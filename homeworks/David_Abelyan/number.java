@@ -1,8 +1,4 @@
-/*
- Failed
-*/
-
-public class number {
+public class Number {
     public static void main(String[] args){
         int n1 = 1245;
         int n2 = 0;
