@@ -1,4 +1,4 @@
-public class burg {
+public class Burg {
     public static void main(String[] args){
         int b = 20;
         for (int i=0; i<b; i++){
