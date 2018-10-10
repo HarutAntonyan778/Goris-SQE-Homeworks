@@ -1,25 +1,26 @@
-// Not working yet
 
 public class Equal {
+    public static void main(String[] args) {
+        boolean ardyunq = hello("Hello Harut", "Hello Harut");
+        System.out.println(ardyunq);
+    }
 
-    public static void main(String args[]) {
-        String str = "Hello World";
-        String str1 = "Hello Harut";
+    static boolean hello(String str, String str1) {
         char[] result = str.toCharArray();
         char[] result1 = str1.toCharArray();
+        boolean havasare = true;
+        if (str.length() != str1.length()) {
+            havasare = false;
+                    return false;
+        }
         for (int i = 0; i < result.length; ++i) {
-            for (int j = 0; j < result1.length; ++j) {
-                char ch1 = str.charAt(i);
-                char ch2 = str1.charAt(j);
-                if (ch1 == ch2) {
-                    System.out.println(ch1 + "+" + ch2);
-                }
-                else {
-                    System.out.println(ch1 + "-" + ch2);
-                }
+            if (result[i] != result1[i]) {
+                havasare = false;
+                return havasare;
             }
         }
+        return havasare;
+
     }
+
 }
-
-
