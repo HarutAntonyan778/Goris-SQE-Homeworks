@@ -1,19 +1,16 @@
-import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
         int r;
-        int b[] = {1, 1, 1, 2, 1, 2, 3, 6, 6, 6, 5};
+        int b[] = {1, 1, 1, 1, 8, 8, 3, 6, 6, 6, 5, -1, 2, 2};
         int i;
         int n = b.length;
         int k = 0;
-        Arrays.sort(b);
+        bubbleSort(b);
         int[] a = new int[n + 1];
         for (r = 0; r < n; r++) {
             a[r] = b[r];
         }
 
-        a[r] = 1000000;
         int c = 1;
         int in[] = new int[10];
         int[] e = new int[10];
@@ -30,12 +27,12 @@ public class Main {
         for (int f = 0; f < k; f++) {
             for (int g = 0; g < k - f - 1; g++) {
                 if (in[g] < in[g + 1]) {
-                    int[] ans = swap(in[g], in[g + 1]);
-                    in[g] = ans[0];
-                    in[g + 1] = ans[1];
-                    int[] an = swap(e[g], e[g + 1]);
-                    e[g] = an[0];
-                    e[g + 1] = an[1];
+                    int aaa = in[g];
+                    in[g] = in[g + 1];
+                    in[g + 1] = aaa;
+                    int bbb = e[g];
+                    e[g] = e[g + 1];
+                    e[g + 1] = bbb;
                 }
             }
         }
@@ -46,18 +43,17 @@ public class Main {
             }
             d++;
         }
-
     }
+    private static void bubbleSort(int[] arr){
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
 
-    static int[] swap(int n1, int n2) {
-        int temp;
-        temp = n1;
-        n1 = n2;
-        n2 = temp;
-        int ans[] = new int[2];
-        ans[0] = n1;
-        ans[1] = n2;
-        return ans;
+        }
     }
-
 }
