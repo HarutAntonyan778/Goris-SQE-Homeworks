@@ -2,12 +2,12 @@ public class ArrayList {
     private int[] arr;
     private int size;
 
-    public ArrayList(int[] values) {
-        this.arr = values;
-        this.size = values.length;
+    public ArrayList(int[] ar) {
+        this.arr = ar;
+        this.size = ar.length;
     }
 
-    int indexOf(int value) {
+    int find(int value) {
         for (int i = 0; i < size; i++) {
             if (arr[i] == value) {
                 return i;
@@ -16,7 +16,7 @@ public class ArrayList {
         return -1;
     }
 
-    boolean remove(int value) {
+    boolean delete(int value) {
         for (int i = 0; i < size; i++) {
             if (arr[i] == value) {
                 --size;
@@ -36,7 +36,7 @@ public class ArrayList {
         System.out.println();
     }
 
-    public void add(int a) {
+    public void insert(int a) {
         if (size == arr.length) {
             int[] secondArray = new int[arr.length + 5];
             for (int i = 0; i < arr.length; i++) {
@@ -46,5 +46,13 @@ public class ArrayList {
 
         }
         arr[size++] = a;
+    }
+
+    public int readFromIndex(int x){
+        return arr[x];
+    }
+
+    public void updateAtIndex(int val, int index){
+        arr[index] = val;
     }
 }
