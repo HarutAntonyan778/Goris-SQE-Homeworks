@@ -10,6 +10,7 @@ public class Main {
         while(n-- >0){
             String s = sc.nextLine();
             String x = "\\([-+]?(([1-8]?\\d)(\\.\\d+)?|90(\\.0+)?)";
+            String y = "[-+]?(([1-9]?\\d|1[0-7]\\d)(\\.\\d+)?|180(\\.0+)?)\\)";
             Pattern p = Pattern.compile(x+", "+ y);
             Matcher m = p.matcher(s);
             if(m.find()){
