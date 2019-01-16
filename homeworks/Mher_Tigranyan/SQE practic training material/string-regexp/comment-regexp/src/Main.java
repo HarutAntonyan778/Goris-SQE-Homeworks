@@ -1,31 +1,33 @@
 import java.io.*;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
 
-    public static void main(String[] args) {
-        BufferedReader reader;
-        Pattern pattern = Pattern.compile("(?s)/\\*(.)*?\\*/");
-        try {
-            reader = new BufferedReader(new FileReader(
-                    "/home/mher/Downloads/armat.sh"));
-            String line = reader.readLine();
-            while (line != null) {
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner scanner = new Scanner( new File("src/Main.java") );
+        String text = scanner.useDelimiter("\\A").next();
+        scanner.close();
+        Pattern pattern = Pattern.compile("(?:/\\*(?:[^*]|(?:\\*+[^*/]))*\\*+/)|(?://.*)");
 
 
-                Matcher matcher = pattern.matcher(line);
-                while (matcher.find()) {
-                    System.out.println(matcher.group());
-                }
+        Matcher matcher = pattern.matcher(text);
+        while (matcher.find()) {
+            System.out.println(matcher.group());
 
-                // read next line
-                line = reader.readLine();
-            }
-            reader.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+    }
+        scanner.close();
     }
 
 }
+
+
+
+
+/* java
+    regexp
+    comment */
+// hello
+/* World */
