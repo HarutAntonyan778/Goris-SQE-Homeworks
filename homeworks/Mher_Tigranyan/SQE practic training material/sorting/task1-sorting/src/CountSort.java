@@ -3,7 +3,7 @@ public class CountSort {
         int[] arr1 = {1, 3, 9, 5, 3, 4, 3};
         counting_sort(arr1);
     }
-     static void counting_sort(int[] arr1){
+     public static void counting_sort(int[] arr1){
         int temp = 0;
         for (int i = 0; i < arr1.length; i++) {
             if (temp < arr1[i]){
@@ -18,7 +18,7 @@ public class CountSort {
 
          for (int i = 0; i < arr2.length; i++) {
              while (arr2[i] != 0){
-                 System.out.print(i + ", ");
+                 System.out.print(i + " ");
                  arr2[i] -= 1;
              }
          }
