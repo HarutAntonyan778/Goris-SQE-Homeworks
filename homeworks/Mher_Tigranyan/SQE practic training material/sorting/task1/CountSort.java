@@ -1,4 +1,4 @@
-public class Main {
+public class CountSort {
     public static void main(String[] args) {
         int[] arr1 = {1, 3, 9, 5, 3, 4, 3};
         counting_sort(arr1);
