@@ -1,28 +1,25 @@
 public class Queue {
-    private int maxsize = 20;
-    private String[] quArray = new String[maxsize];
+    private static final int defaultSize = 10;
+    private String[] quArray= new String [defaultSize];
     private int len = 0;
 
     public void push(String newElement) {
-        if (len < quArray.length - 1) {
-            quArray[len + 1] = newElement;
-            len++;
-            System.out.println("The string added");
-        } else {
-            System.out.println(" The stack is full");
+        if (len == quArray.length - 1) {
+            String arr2[] = new String [quArray.length + 5];
+            for (int i = 0; i < quArray.length; ++i) {
+                arr2[i] = quArray [i];
+            }
+            quArray = arr2;
         }
+        quArray[len ] = newElement;
+        len++;
+        System.out.println("The string added");
     }
 
-    public void pop() {
-        if (len >= 0) {
-            String st[] = new String[maxsize];
-            for (int i = 1; i <= len; i++)
-                st[i - 1] = quArray[i];
-            len--;
-            quArray = st;
-        } else {
-            System.out.println(" the queue is empty");
-        }
+    public String pop() {
+        if (len == 0)
+            return null ;
+        return quArray [--len];
     }
 
     public String top() {

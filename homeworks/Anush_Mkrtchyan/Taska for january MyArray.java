@@ -1,27 +1,31 @@
-public class MyArray {
-    private static int[] array;
-    private static int size;
+public class MyArray <K> {
+    private Object [] array=new Object[20];
+    private  int size=0;
 
-    public static void setArray(int[] array) {
-        MyArray.array = array;
+    public void add (K element){
+        if (size==array.length-1 ){
+        Object c[]=new Object[size+1];
+         for( int i=0; i < array.length; i++){
+            c[i]=array[i];}
+          array=c;
+        }
+        array[size]=element;
+        size++;
     }
 
-    public static void setSize() {
-        MyArray.size = array.length;
-    }
-
-    public static int getSize() {
+    public  int getSize() {
         System.out.println( size);
         return size;
     }
 
-    public static int[] printArray() {
-        for (int i = 0; i < array.length; i++)
+    public  Object[] printArray() {
+        for (int i = 0; i < size; i++)
             System.out.println(array[i]);
         return array;
     }
-    public static int [] delete( int index) {
-        int b[] = new int[size - 1];
+
+    public  Object [] delete( int index) {
+        Object b[] = new Object [size - 1];
         if ( index<= size ){
             for (int i = 0; i < size; i++) {
                 if (i <= index) {
@@ -38,17 +42,11 @@ public class MyArray {
         }
         return array;
     }
-    public static void insert(int element){
-    int c[]=new int[size+1];
-    size++;
-    for( int i=0; i<c.length-1; i++)
-        c[i]=array[i];
-    c [ size-1 ]= element;
-    array=c;
-    }
 
-    public static void insertAtIndex(int index, int element ){
-     int c[]=new int[size+1];
+
+
+    public void insertAtIndex(int index, K element ){
+     Object c[]=new Object [size+1];
      size++;
      c[index]= element;
      for( int i=0; i<size; i++){
@@ -61,17 +59,18 @@ public class MyArray {
      array=c;
     }
 
-    public static void update(int index, int element ){
+    public  void update(int index, K element ){
         if( index < size ){
             array[index]=element;
         }else {
             System.out.println(" the index is not correct");
         }
     }
-    public static void read(int index){
+    public void read(int index){
+
         System.out.println(array[index]);
     }
-    public static int find(int element ){
+    public int find( K element ){
         int k=-1;
         for( int i=0; i<size; i++){
             if( array[i] == element ){
