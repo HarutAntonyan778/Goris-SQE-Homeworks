@@ -1,4 +1,4 @@
-public class Task3 {
+public class secondSmallest {
     static void smallest2(int arr[]) {
         int first, second;
         if (arr.length < 2) {

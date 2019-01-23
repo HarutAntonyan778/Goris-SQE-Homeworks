@@ -1,4 +1,4 @@
-class Task2
+class  missingInteger
 {
     static int getMissingNo (int a[], int n)
     {

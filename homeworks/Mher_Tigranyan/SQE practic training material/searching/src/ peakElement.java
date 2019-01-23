@@ -1,4 +1,4 @@
-public class Task4Liner {
+public class  peakElement {
     public static int searchPeak(int arr[], int a) {
         if (arr[0] > arr[1]){
             return arr[0];
