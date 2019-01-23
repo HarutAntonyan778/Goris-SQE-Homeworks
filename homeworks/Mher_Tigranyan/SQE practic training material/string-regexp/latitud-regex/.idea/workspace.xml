@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86dd580a-f770-4873-91bd-f8e3461524aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../comment-regexp/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../comment-regexp/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../comment-regexp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../comment-regexp/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../comment-regexp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../comment-regexp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../comment-regexp/out/production/comment-regexp/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../comment-regexp/out/production/comment-regexp/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../comment-regexp/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../comment-regexp/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../array-list/array-biginteger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../array-list/array-biginteger/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +47,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
     <option name="y" value="-4" />
-    <option name="width" value="1277" />
-    <option name="height" value="728" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -121,8 +115,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16970702" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1713654" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
