@@ -7,16 +7,15 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         sc.nextLine();
-        while(n-- >0){
+        while (n-- > 0) {
             String s = sc.nextLine();
             String x = "\\([-+]?(([1-8]?\\d)(\\.\\d+)?|90(\\.0+)?)";
             String y = "[-+]?(([1-9]?\\d|1[0-7]\\d)(\\.\\d+)?|180(\\.0+)?)\\)";
-            Pattern p = Pattern.compile(x+", "+ y);
+            Pattern p = Pattern.compile(x + ", " + y);
             Matcher m = p.matcher(s);
-            if(m.find()){
+            if (m.find()) {
                 System.out.println("Valid");
-            }
-            else System.out.println("Invalid");
+            } else System.out.println("Invalid");
         }
     }
 }

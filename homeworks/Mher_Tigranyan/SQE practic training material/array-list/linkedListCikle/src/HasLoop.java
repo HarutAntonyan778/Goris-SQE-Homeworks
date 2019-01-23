@@ -1,9 +1,9 @@
 public class HasLoop {
     boolean hasLoop(ListNode first) {
 
-        if (first == null)
+        if (first == null) {
             return false;
-
+        }
         ListNode slow, fast;
 
         slow = fast = first;
@@ -12,25 +12,27 @@ public class HasLoop {
 
             slow = slow.next;
 
-            if (fast.next != null)
+            if (fast.next != null) {
                 fast = fast.next.next;
-            else
+            }else {
                 return false;
-
-            if (slow == null || fast == null)
+            }
+            if (slow == null || fast == null) {
                 return false;
-
-            if (slow == fast)
+            }
+            if (slow == fast) {
                 return true;
+            }
         }
     }
 }
-    class ListNode {
-        private int val;
-        ListNode next;
 
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
+class ListNode {
+    private int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+        next = null;
     }
+}

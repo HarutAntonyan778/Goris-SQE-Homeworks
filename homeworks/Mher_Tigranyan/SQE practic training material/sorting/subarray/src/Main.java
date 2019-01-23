@@ -4,8 +4,9 @@ class Main {
         int a = 0, b = n - 1, i;
 
         for (a = 0; a < n - 1; a++) {
-            if (arr[a] > arr[a + 1])
+            if (arr[a] > arr[a + 1]) {
                 break;
+            }
         }
         if (a == n - 1) {
             System.out.println("The array is sorted");
@@ -13,17 +14,20 @@ class Main {
         }
 
         for (b = n - 1; b > 0; b--) {
-            if (arr[b] < arr[b - 1])
+            if (arr[b] < arr[b - 1]) {
                 break;
+            }
         }
 
         int max = arr[a];
         int min = arr[a];
         for (i = a + 1; i <= b; i++) {
-            if (arr[i] > max)
+            if (arr[i] > max) {
                 max = arr[i];
-            if (arr[i] < min)
+            }
+            if (arr[i] < min) {
                 min = arr[i];
+            }
         }
 
         for (i = 0; i < a; i++) {
@@ -35,7 +39,7 @@ class Main {
 
         for (i = n - 1; i >= b + 1; i--) {
             if (arr[i] < max) {
-                b= i;
+                b = i;
                 break;
             }
         }

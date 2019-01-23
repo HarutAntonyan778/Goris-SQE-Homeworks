@@ -48,11 +48,11 @@ public class ArrayList {
         arr[size++] = a;
     }
 
-    public int readFromIndex(int x){
+    public int readFromIndex(int x) {
         return arr[x];
     }
 
-    public void updateAtIndex(int val, int index){
+    public void updateAtIndex(int val, int index) {
         arr[index] = val;
     }
 }

@@ -1,6 +1,5 @@
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         MyQueue q = new MyQueue();
         q.enqueue(5);
         q.enqueue(10);

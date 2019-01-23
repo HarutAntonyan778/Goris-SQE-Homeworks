@@ -9,12 +9,12 @@ public class MyQueue {
 
     public int dequeue() {
         // fill out all the Input if output stack is empty
-        if(s2.isEmpty())
-            while(!s1.isEmpty())
+        if (s2.isEmpty())
+            while (!s1.isEmpty())
                 s2.push(s1.pop());
 
         int temp = 0;
-        if(!s2.isEmpty()) {
+        if (!s2.isEmpty()) {
             temp = s2.pop();
             size--;
         }

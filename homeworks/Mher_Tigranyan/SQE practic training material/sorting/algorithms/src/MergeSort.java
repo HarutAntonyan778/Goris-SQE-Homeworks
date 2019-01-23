@@ -1,5 +1,5 @@
 public class MergeSort {
-    static void merge(int[] arr, int l, int m, int r){
+    static void merge(int[] arr, int l, int m, int r) {
         int n1 = m - l + 1;
         int n2 = r - m;
 
@@ -15,42 +15,41 @@ public class MergeSort {
 
         int i = 0, j = 0;
         int k = l;
-        while (i < n1 && j < n2){
-            if (L[i] < R[j]){
+        while (i < n1 && j < n2) {
+            if (L[i] < R[j]) {
                 arr[k] = L[i];
                 i++;
-            }else {
+            } else {
                 arr[k] = R[j];
                 j++;
             }
             k++;
         }
 
-        while (i < n1){
+        while (i < n1) {
             arr[k] = L[i];
             i++;
             k++;
         }
-        while (i < n2){
+        while (i < n2) {
             arr[k] = R[j];
             j++;
             k++;
         }
     }
 
-    static void sort(int[] arr, int l, int r){
-        if (l < r){
-            int m = (l + r)/2;
-            sort(arr,l,m);
+    static void sort(int[] arr, int l, int r) {
+        if (l < r) {
+            int m = (l + r) / 2;
+            sort(arr, l, m);
             sort(arr, m + 1, r);
             merge(arr, l, m, r);
         }
     }
 
-    static void printArray(int arr[])
-    {
+    static void printArray(int arr[]) {
         int n = arr.length;
-        for (int i=0; i<n; ++i)
+        for (int i = 0; i < n; ++i)
             System.out.print(arr[i] + " ");
         System.out.println();
     }

@@ -1,4 +1,4 @@
-public class firstRepeatingElement {
+public class FirstRepeatingElement {
     public static void main(String[] args) {
         int arr[] = {6, 10, 5, 4, 9, 120, 4, 6, 10};
         int n = arr.length;

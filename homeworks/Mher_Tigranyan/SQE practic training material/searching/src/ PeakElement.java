@@ -1,14 +1,13 @@
-public class  peakElement {
+public class PeakElement {
     public static int searchPeak(int arr[], int a) {
-        if (arr[0] > arr[1]){
+        if (arr[0] > arr[1]) {
             return arr[0];
         }
         if (arr[a - 1] > arr[a - 2]) {
-            return arr[a-1];
+            return arr[a - 1];
         }
-        for(int i = 1; i < arr.length - 1; i++) {
-            if(arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
-
+        for (int i = 1; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1]) {
                 return arr[i];
             }
         }
