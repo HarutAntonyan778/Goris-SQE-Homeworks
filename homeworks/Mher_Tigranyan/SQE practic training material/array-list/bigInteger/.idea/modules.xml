@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/array-task5.iml" filepath="$PROJECT_DIR$/array-task5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bigInteger.iml" filepath="$PROJECT_DIR$/bigInteger.iml" />
     </modules>
   </component>
 </project>
