@@ -41,7 +41,6 @@ public class Stack {
                 }
             }
         }
-        if (isEmpty()) return true;
-        else return false;
+       return isEmpty();
     }
 }
