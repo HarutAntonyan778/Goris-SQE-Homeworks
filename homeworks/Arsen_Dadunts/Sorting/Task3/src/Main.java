@@ -1,7 +1,13 @@
 public class Main {
     public static void main(String[] args) {
         int arr[] = {0, 1, 15, 25, 6, 7, 30, 40, 50};
+        int [] array1={4,3,2,7,98,65,43,21,1,2,0,54};
+        int [] array2={5,32,23,13,38,63,4,13,41,23,10,52};
+        int [] array3={2,25,21,33,28,35,15,43,13,13,178,152};
         unsorted(arr);
+        unsorted(array1);
+        unsorted(array2);
+        unsorted(array3);
     }
 
     public static void unsorted(int arr[]) {
@@ -46,4 +52,3 @@ public class Main {
     }
 
 }
-
