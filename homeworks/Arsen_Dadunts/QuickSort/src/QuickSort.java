@@ -1,5 +1,5 @@
 public class QuickSort {
-    public  void printArray (int[] list)
+    public  void printsortedArray (int[] list)
     {
         quickSort(list, 0, list.length - 1);
         for (int i = 0; i <list.length; i++) {
