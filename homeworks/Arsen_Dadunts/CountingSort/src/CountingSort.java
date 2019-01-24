@@ -1,23 +1,11 @@
-import java.util.Scanner;
-
 public class CountingSort {
 
-    public void sort() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the array length: ");
-        int length = scanner.nextInt();
-        int[] arr = new int[length];
+    public void sort(int [] arr) {
         for (int i=0; i<arr.length; i++){
             if(arr[i]<0){
                 System.out.print("The counting sort can not sort when array have negative number:");
-                return sort();
-                }
-        }
-        
-        int temp = 0;
-        while (temp < length) {
-            arr[temp] = scanner.nextInt();
-            temp++;
+                System.exit(0);
+            }
         }
         int max = arr[1];
         for (int i = 0; i < arr.length; ++i) {
@@ -35,5 +23,6 @@ public class CountingSort {
                 System.out.print(" " + i);
             }
         }
+        System.out.println();
     }
 }
