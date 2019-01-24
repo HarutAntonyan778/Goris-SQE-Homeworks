@@ -1,28 +1,43 @@
 public class QuickSort {
-
-    public void sort(int[] a, int length) {
-        int i = 0, j = length - 1;
-        int p = a[a.length / 2];
-        int temp;
-
-        do {
-            while (a[i] < p) i++;
-            while (a[j] > p) j--;
-            if (i <= j) {
-                temp = a[i];
-                a[i] = a[j];
-                a[j] = temp;
-                i++;
-                j--;
-            }
-        } while (i <= j);
-        if (j > 0) sort(a, j);
-        if (length > i) sort(a, length - i);
-    }
-
-    public void check(int[] b) {
-        for (int i = 0; i < b.length; i++) {
-            System.out.print(" " + b[i]);
+    public  void printArray (int[] list)
+    {
+        quickSort(list, 0, list.length - 1);
+        for (int i = 0; i <list.length; i++) {
+            System.out.print(" "+ list[i]);
         }
     }
+    public static void quickSort (int[] list, int low, int high)
+    {
+        final int MOVING_LEFT = 0;
+        final int MOVING_RIGHT = 1;
+        if (low < high)
+        {
+            int left = low;
+            int right = high;
+            int currentDirection = MOVING_LEFT;
+            int pivot = list[low];
+            while (left < right)
+            {
+                if (currentDirection == MOVING_LEFT)
+                {
+                    while ((list[right] >= pivot) && (left < right))
+                        right--;
+                    list[left] = list[right];
+                    currentDirection = MOVING_RIGHT;
+                }
+                if (currentDirection == MOVING_RIGHT)
+                {
+                    while ((list[left] <= pivot) && (left < right))
+                        left++;
+                    list[right] = list[left];
+                    currentDirection = MOVING_LEFT;
+                }
+            }
+            list[left] = pivot; // or list[right] = pivot, since left == right
+            quickSort(list, low, left-1);
+            quickSort(list, right+1, high);
+        }
+
+    }
+
 }
