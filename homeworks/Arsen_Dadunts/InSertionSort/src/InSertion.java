@@ -1,20 +1,20 @@
 public class InSertion {
-    public void sort(int a[]) {
+    public void sort(int[] arr) {
         int temp;
-        for (int i = 0; i < a.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             for (int j = i; j >0; j--) {
-                if (a[j]<a[j-1]){
-                    temp=a[j];
-                    a[j]=a[j-1];
-                    a[j-1]=temp;
+                if (arr[j]<arr[j-1]){
+                    temp=arr[j];
+                    arr[j]=arr[j-1];
+                    arr[j-1]=temp;
                 }
                 else break;
             }
         }
-        for (int number:a
-             ) {
+        for (int number:arr
+        ) {
             System.out.print(" "+number);
         }
+        System.out.println();
     }
 }
-
