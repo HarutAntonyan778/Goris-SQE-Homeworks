@@ -2,6 +2,7 @@ public class RedBlackTree<K,V> {
     Node<K,V> root;
     int size;
     class Node<K,V> {
+        boolean isleftChiled;
         K key;
         V value;
         Node<K,V> left, right, parent;
@@ -12,6 +13,7 @@ public class RedBlackTree<K,V> {
             left = right = parent = null;
             isleft = false;
             black = false;
+            isleftChiled = false;
         }
     }
 
@@ -33,6 +35,7 @@ public class RedBlackTree<K,V> {
                 parent.right = newNode;
                 newNode.parent = parent;
                 newNode.isleft = false;
+
                 return;
             }
             add(parent.right, newNode);
@@ -42,6 +45,7 @@ public class RedBlackTree<K,V> {
             parent.left = newNode;
             newNode.parent = parent;
             newNode.isleft = true;
+
             return;
         }
         add(parent.left, newNode);
@@ -86,10 +90,12 @@ public class RedBlackTree<K,V> {
         }
 
     }
+    
+    
 
     public void rotate(Node<K,V> node){
-        if (node.isleftChild){
-            if (node.parent.isleftChild){
+        if (node.isleftChiled){
+            if (node.parent.isleftChiled){
                 rightRotate(node.parent.parent);
                 node.black = false;
                 node.parent.black = true;
@@ -98,15 +104,15 @@ public class RedBlackTree<K,V> {
                 }
                 return;
             }
-            rightLeftRotate(node.parent.parent);
+            rightleftRotate(node.parent.parent);
             node.black = true;
             node.right.black = false;
             node.left.black = false;
             return;
         }
 
-        if (!node.isLeftChild){
-            if (!node.parent.isleftChild){
+        if (!node.isleftChiled){
+            if (!node.parent.isleftChiled){
                 leftRotate(node.parent.parent);
                 node.black = false;
                 node.parent.black = true;
@@ -128,7 +134,7 @@ public class RedBlackTree<K,V> {
         node.right = temp.left;
         if (node.right != null){
             node.right.parent = node;
-            node.right.isLeftChild = false;
+            node.right.isleftChiled = false;
         }
         if (node.parent == null){
             // we add the root node
@@ -136,16 +142,41 @@ public class RedBlackTree<K,V> {
             temp.parent = null;
         } else {
             temp.parent = node.parent;
-            if (node.isLeftChild){
-                temp.isLeftChild = true;
+            if (node.isleftChiled){
+                temp.isleftChiled = true;
                 temp.parent.left = temp;
             }else {
-                temp.isLeftChild = false;
+                temp.isleftChiled = false;
                 temp.parent.right = temp;
             }
         }
         temp.left = node;
-        node.isLeftChild = true;
+        node.isleftChiled = true;
+        node.parent = temp;
+    }
+    public void rightRotate(Node<K,V> node){
+        Node<K,V> temp = node.left;
+        node.left = temp.right;
+        if (node.left != null){
+            node.left.parent = node;
+            node.left.isleftChiled = false;
+        }
+        if (node.parent == null){
+            // we add the root node
+            root = temp;
+            temp.parent = null;
+        } else {
+            temp.parent = node.parent;
+            if (node.isleftChiled){
+                temp.isleftChiled = true;
+                temp.parent.right = temp;
+            }else {
+                temp.isleftChiled = false;
+                temp.parent.left = temp;
+            }
+        }
+        temp.right = node;
+        node.isleftChiled = true;
         node.parent = temp;
     }
 }

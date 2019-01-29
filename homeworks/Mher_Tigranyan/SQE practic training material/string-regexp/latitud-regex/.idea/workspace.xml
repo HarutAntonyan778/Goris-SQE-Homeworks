@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86dd580a-f770-4873-91bd-f8e3461524aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../sorting/missingElements/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../sorting/missingElements/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../sorting/missingElements/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../sorting/missingElements/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../sorting/missingElements/out/production/task-5/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../sorting/missingElements/out/production/task-5/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/latitud-regex/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/latitud-regex/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../red-black-tree/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../red-black-tree/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../red-black-tree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../red-black-tree/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../red-black-tree/src/RedBlackTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../red-black-tree/src/RedBlackTree.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,11 +47,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="65" />
     <option name="y" value="-4" />
-    <option name="width" value="1301" />
-    <option name="height" value="772" />
+    <option name="width" value="1277" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -123,7 +122,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="7" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17468214" />
