@@ -2,6 +2,7 @@ public class RedBlackTree<K,V> {
     Node<K,V> root;
     int size;
     class Node<K,V> {
+        boolean isleftChiled;
         K key;
         V value;
         Node<K,V> left, right, parent;
@@ -35,6 +36,7 @@ public class RedBlackTree<K,V> {
                 parent.right = newNode;
                 newNode.parent = parent;
                 newNode.isleft = false;
+
                 return;
             }
             add(parent.right, newNode);
@@ -44,6 +46,7 @@ public class RedBlackTree<K,V> {
             parent.left = newNode;
             newNode.parent = parent;
             newNode.isleft = true;
+
             return;
         }
         add(parent.left, newNode);
@@ -88,6 +91,8 @@ public class RedBlackTree<K,V> {
         }
 
     }
+    
+    
 
     public void rotate(Node<K,V> node){
         if (node.isleftChiled){
@@ -100,7 +105,7 @@ public class RedBlackTree<K,V> {
                 }
                 return;
             }
-            rightLeftRotate(node.parent.parent);
+            rightleftRotate(node.parent.parent);
             node.black = true;
             node.right.black = false;
             node.left.black = false;
@@ -148,6 +153,34 @@ public class RedBlackTree<K,V> {
         }
         temp.left = node;
         node.isleftChiled = true;
+<<<<<<< HEAD
+=======
+        node.parent = temp;
+    }
+    public void rightRotate(Node<K,V> node){
+        Node<K,V> temp = node.left;
+        node.left = temp.right;
+        if (node.left != null){
+            node.left.parent = node;
+            node.left.isleftChiled = false;
+        }
+        if (node.parent == null){
+            // we add the root node
+            root = temp;
+            temp.parent = null;
+        } else {
+            temp.parent = node.parent;
+            if (node.isleftChiled){
+                temp.isleftChiled = true;
+                temp.parent.right = temp;
+            }else {
+                temp.isleftChiled = false;
+                temp.parent.left = temp;
+            }
+        }
+        temp.right = node;
+        node.isleftChiled = true;
+>>>>>>> 0c441921524e8c38455fa92386814269c7be6ab8
         node.parent = temp;
     }
 
