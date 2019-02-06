@@ -9,12 +9,12 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String URL = "https://ok.ru";
+        String URL = "https://stackoverflow.com/";
         printLink(URL);
 
     }
 
-    public static void printLink(String url) throws IOException{
+    public static void printLink(String url) throws IOException {
         Document doc = Jsoup.connect(url).get();
 
         Elements links = doc.select("a");
@@ -22,16 +22,22 @@ public class Main {
             String newLink = element.attr("abs:href");
             if (!newLink.isEmpty()) {
                 Connection.Response response = Jsoup.connect(newLink)
+                        .followRedirects(true)
                         .method(Connection.Method.GET)
                         .ignoreContentType(true)
                         .ignoreHttpErrors(true)
                         .execute();
+//                System.out.println(newLink);
                 if (response.statusCode() >= 400) {
-                    System.out.println(newLink);
+                    System.out.println(response.url());
                 }
-
             }
-            printLink(newLink);
+        }
+        for (Element subLink : links) {
+            String absLink = subLink.attr("abs:href");
+            if (!absLink.isEmpty()) {
+                printLink(absLink);
+            }
         }
     }
 }
